@@ -1,10 +1,14 @@
-import React from "react";
-
+import React, { Fragment } from "react";
+import { Nav, NavbarContainer, NavLogo } from "./NavbarElements";
 const Navbar = () => {
   return (
-    <div>
-      <h1>Nav</h1>
-    </div>
+    <Fragment>
+      <Nav>
+        <NavbarContainer>
+          <NavLogo to="/">SMOOTH</NavLogo>
+        </NavbarContainer>
+      </Nav>
+    </Fragment>
   );
 };
 
