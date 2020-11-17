@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { useEffect, useState } from "react";
 import { FaBars } from "react-icons/fa";
 import {
   Nav,
@@ -11,10 +11,25 @@ import {
   NavBtn,
   NavBtnLink,
 } from "./NavbarElements";
-const Navbar = ({toggle}) => {
+import { IconContext } from "react-icons/lib";
+const Navbar = ({ toggle }) => {
+  const [scrollNav, setScrollNav] = useState(false);
+
+  const changeNav = () => {
+    if (window.scrollY >= 80) {
+      setScrollNav(true);
+    } else {
+      setScrollNav(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", changeNav);
+  }, []);
+
   return (
-    <Fragment>
-      <Nav>
+    <IconContext.Provider value={{ color: "#fff" }}>
+      <Nav scrollNav={scrollNav}>
         <NavbarContainer>
           <NavLogo to="/">SMOOTH</NavLogo>
           <MobileIcon onClick={toggle}>
@@ -39,7 +54,7 @@ const Navbar = ({toggle}) => {
           </NavBtn>
         </NavbarContainer>
       </Nav>
-    </Fragment>
+    </IconContext.Provider>
   );
 };
 
