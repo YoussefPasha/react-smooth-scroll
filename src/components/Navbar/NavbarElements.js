@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Link as LinkR } from "react-router-dom";
 import { Link as LinkS } from "react-scroll";
+
 export const Nav = styled.nav`
   background: #000;
   height: 80px;
@@ -37,6 +38,9 @@ export const NavLogo = styled(LinkR)`
   margin-left: 24px;
   font-weight: bold;
   text-decoration: none;
+  &:hover {
+    color: #01bf71;
+  }
 `;
 
 export const MobileIcon = styled.div`
@@ -77,8 +81,10 @@ export const NavLinks = styled(LinkS)`
   padding: 0 1rem;
   height: 100%;
   cursor: pointer;
-
-  &:active {
+  &:hover {
+    color: #01bf71;
+  }
+  &.active {
     border-bottom: 3px solid #01bf71;
   }
 `;
