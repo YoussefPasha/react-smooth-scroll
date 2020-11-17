@@ -77,9 +77,15 @@ export const ServicesH1 = styled.h1`
 export const ServicesH2 = styled.h2`
   font-size: 1.5rem;
   margin-bottom: 10px;
+  @media screen and (max-width: 480px) {
+    font-size: 1.1rem;
+  }
 `;
 
 export const ServicesP = styled.p`
   font-size: 1.1rem;
   text-align: center;
+  @media screen and (max-width: 480px) {
+    font-size: 0.8rem;
+  }
 `;
