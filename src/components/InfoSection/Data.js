@@ -49,7 +49,7 @@ export const homeObjThree = {
   buttonLabel: "Start Now",
   imgStart: false,
   img: charts,
-  alt: "Paper",
+  alt: "charts",
   dark: false,
   primary: false,
   darkText: true,
